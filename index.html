@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Gana Robux</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #6DFF2F;
+      --green-dark: #0CBF35;
+      --green-glow: #39FF14;
+      --black: #030503;
+      --dark: #071007;
+      --card: #0d1a0d;
+      --border: rgba(109,255,47,0.25);
+      --text: #f3fff0;
+      --muted: #a5b8a1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(57,255,20,0.22), transparent 35%),
+        linear-gradient(180deg, #020402, #061006 60%, #020402);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(109,255,47,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(109,255,47,0.04) 1px, transparent 1px);
+      background-size: 42px 42px;
+      pointer-events: none;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      height: 58px;
+      padding: 0 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(3,5,3,0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-back {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #0b160b;
+      color: var(--green);
+      cursor: pointer;
+    }
+
+    .nav-label {
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-family: 'Space Mono', monospace;
+    }
+
+    .hero {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 70px 22px 45px;
+    }
+
+    .hero-icon {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 22px;
+      border-radius: 24px;
+      background:
+        linear-gradient(145deg, #9eff58, #18c92e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow:
+        0 0 35px rgba(57,255,20,0.65),
+        inset 0 0 18px rgba(255,255,255,0.35);
+      border: 3px solid rgba(255,255,255,0.22);
+    }
+
+    .hero-icon span {
+      width: 42px;
+      height: 42px;
+      background: #050805;
+      transform: rotate(45deg);
+      border-radius: 8px;
+      position: relative;
+      box-shadow: inset 0 0 12px rgba(109,255,47,0.5);
+    }
+
+    .hero-icon span::after {
+      content: "";
+      position: absolute;
+      inset: 13px;
+      background: var(--green);
+      border-radius: 3px;
+    }
+
+    .hero-title {
+      font-size: clamp(34px, 7vw, 54px);
+      font-weight: 900;
+      line-height: 1.05;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow:
+        0 4px 0 #133313,
+        0 0 28px rgba(57,255,20,0.45);
+    }
+
+    .hero-title span {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 6px 22px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #8cff3d, #16be31);
+      color: #071007;
+      text-shadow: none;
+      box-shadow: 0 0 25px rgba(57,255,20,0.45);
+    }
+
+    .hero-sub {
+      margin-top: 18px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .badge {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 7px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(57,255,20,0.08);
+      color: var(--green);
+      font-size: 12px;
+      font-family: 'Space Mono', monospace;
+      box-shadow: 0 0 18px rgba(57,255,20,0.18);
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: auto;
+      padding: 0 18px 70px;
+    }
+
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .toc a {
+      text-decoration: none;
+      color: var(--green);
+      border: 1px solid var(--border);
+      background: rgba(13,26,13,0.86);
+      padding: 8px 14px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 900;
+      font-family: 'Space Mono', monospace;
+    }
+
+    details {
+      margin-bottom: 12px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background:
+        linear-gradient(180deg, rgba(20,42,18,0.95), rgba(8,16,8,0.95));
+      box-shadow: 0 0 22px rgba(57,255,20,0.08);
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .num {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: #061006;
+      background: linear-gradient(180deg, #9cff55, #18c92e);
+      padding: 5px 9px;
+      border-radius: 9px;
+      box-shadow: 0 0 15px rgba(57,255,20,0.35);
+    }
+
+    .body {
+      border-top: 1px solid var(--border);
+      padding: 20px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .body strong {
+      color: var(--green);
+    }
+
+    ul {
+      margin-top: 12px;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .contact-card {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #82ff38, #16bd31);
+      color: #061006;
+      font-weight: 900;
+      text-decoration: none;
+      box-shadow: 0 0 24px rgba(57,255,20,0.45);
+    }
+
+    .footer {
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding: 28px 18px;
+      color: var(--muted);
+      font-size: 13px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer a {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 800;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <button class="nav-back" onclick="history.back()">←</button>
+    <span class="nav-label">Privacy Policy</span>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-icon">
+      <span></span>
+    </div>
+
+    <h1 class="hero-title">
+      Gana Robux<br>
+      <span>Privacy Policy</span>
+    </h1>
+
+    <p class="hero-sub">Gana Robux · Earn Rewards</p>
+    <div class="badge">Last updated: March 27, 2026</div>
+  </header>
+
+  <main class="content">
+
+    <nav class="toc">
+      <a href="#intro">01 Intro</a>
+      <a href="#data">02 Data</a>
+      <a href="#use">03 Usage</a>
+      <a href="#admob">04 AdMob</a>
+      <a href="#security">05 Security</a>
+      <a href="#rights">06 Rights</a>
+      <a href="#contact">07 Contact</a>
+    </nav>
+
+    <details id="intro" open>
+      <summary><span class="num">01</span> Introduction</summary>
+      <div class="body">
+        <p>Welcome to <strong>Gana Robux</strong>. We respect your privacy and want to protect your personal data. This Privacy Policy explains how we collect, use, and protect your information when you use our app.</p>
+      </div>
+    </details>
+
+    <details id="data">
+      <summary><span class="num">02</span> Data We Collect</summary>
+      <div class="body">
+        <p>We may collect the following types of data:</p>
+        <ul>
+          <li><strong>Identity Data</strong> — name or unique user identifier.</li>
+          <li><strong>Contact Data</strong> — email address.</li>
+          <li><strong>Usage Data</strong> — app activity, reward activity, and feature usage.</li>
+          <li><strong>Device Data</strong> — device type, operating system, and app version.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details id="use">
+      <summary><span class="num">03</span> How We Use Your Data</summary>
+      <div class="body">
+        <ul>
+          <li>To provide reward-related app features.</li>
+          <li>To manage user accounts and reward points.</li>
+          <li>To process redemption or support requests.</li>
+          <li>To improve app performance and user experience.</li>
+          <li>To send important updates and notifications.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details id="admob">
+      <summary><span class="num">04</span> AdMob & Third Parties</summary>
+      <div class="body">
+        <p>Gana Robux may use <strong>Google AdMob</strong> to display advertisements. Google and third-party partners may collect certain data to show ads, measure performance, prevent fraud, and improve services.</p>
+      </div>
+    </details>
+
+    <details id="security">
+      <summary><span class="num">05</span> Data Security</summary>
+      <div class="body">
+        <p>We use reasonable security measures to protect your information from unauthorized access, loss, misuse, or disclosure.</p>
+      </div>
+    </details>
+
+    <details id="rights">
+      <summary><span class="num">06</span> Your Rights</summary>
+      <div class="body">
+        <p>Depending on your location, you may have the right to access, correct, delete, restrict, or object to the processing of your personal data.</p>
+        <p>You can contact us at <strong>cave.study7@gmail.com</strong>.</p>
+      </div>
+    </details>
+
+    <details id="contact">
+      <summary><span class="num">07</span> Contact Us</summary>
+      <div class="body">
+        <p>For any questions about this Privacy Policy, contact us here:</p>
+        <a href="mailto:cave.study7@gmail.com" class="contact-card">cave.study7@gmail.com</a>
+      </div>
+    </details>
+
+  </main>
+
+  <footer class="footer">
+    <a href="#">Terms of Service</a>
+    <a href="#">Privacy Policy</a>
+    <a href="mailto:cave.study7@gmail.com">Contact</a>
+    <p style="margin-top:14px;">© 2026 Gana Robux. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
