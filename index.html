@@ -1,384 +1,551 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Gana Rbx</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Privacy Policy | Free Robux Coins and Rewards</title>
+  <meta name="description" content="Privacy Policy for Free Robux Coins and Rewards, Android app developed by Ankita KC.">
 
   <style>
     :root {
-      --green: #6DFF2F;
-      --green-dark: #0CBF35;
-      --green-glow: #39FF14;
-      --black: #030503;
-      --dark: #071007;
+      --green: #6dff2f;
+      --dark-green: #0cbf35;
+      --bg: #030603;
       --card: #0d1a0d;
-      --border: rgba(109,255,47,0.25);
+      --border: rgba(109,255,47,.25);
       --text: #f3fff0;
-      --muted: #a5b8a1;
+      --muted: #afc0aa;
     }
 
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Nunito', sans-serif;
+      margin: 0;
       background:
-        radial-gradient(circle at top, rgba(57,255,20,0.22), transparent 35%),
-        linear-gradient(180deg, #020402, #061006 60%, #020402);
+        radial-gradient(circle at top, #123015, transparent 450px),
+        var(--bg);
       color: var(--text);
-      line-height: 1.7;
-      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(109,255,47,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(109,255,47,0.04) 1px, transparent 1px);
-      background-size: 42px 42px;
-      pointer-events: none;
-    }
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      height: 58px;
-      padding: 0 22px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: rgba(3,5,3,0.88);
-      backdrop-filter: blur(16px);
+    header {
+      padding: 65px 20px 45px;
+      text-align: center;
       border-bottom: 1px solid var(--border);
     }
 
-    .nav-back {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: #0b160b;
-      color: var(--green);
-      cursor: pointer;
-    }
-
-    .nav-label {
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--green);
-      font-family: 'Space Mono', monospace;
-    }
-
-    .hero {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 70px 22px 45px;
-    }
-
-    .hero-icon {
-      width: 88px;
-      height: 88px;
-      margin: 0 auto 22px;
-      border-radius: 24px;
-      background:
-        linear-gradient(145deg, #9eff58, #18c92e);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow:
-        0 0 35px rgba(57,255,20,0.65),
-        inset 0 0 18px rgba(255,255,255,0.35);
-      border: 3px solid rgba(255,255,255,0.22);
-    }
-
-    .hero-icon span {
-      width: 42px;
-      height: 42px;
-      background: #050805;
-      transform: rotate(45deg);
-      border-radius: 8px;
-      position: relative;
-      box-shadow: inset 0 0 12px rgba(109,255,47,0.5);
-    }
-
-    .hero-icon span::after {
-      content: "";
-      position: absolute;
-      inset: 13px;
-      background: var(--green);
-      border-radius: 3px;
-    }
-
-    .hero-title {
-      font-size: clamp(34px, 7vw, 54px);
-      font-weight: 900;
-      line-height: 1.05;
-      text-transform: uppercase;
-      color: #fff;
-      text-shadow:
-        0 4px 0 #133313,
-        0 0 28px rgba(57,255,20,0.45);
-    }
-
-    .hero-title span {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 6px 22px;
-      border-radius: 16px;
-      background: linear-gradient(180deg, #8cff3d, #16be31);
-      color: #071007;
-      text-shadow: none;
-      box-shadow: 0 0 25px rgba(57,255,20,0.45);
-    }
-
-    .hero-sub {
-      margin-top: 18px;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .badge {
-      margin-top: 20px;
+    .tag {
       display: inline-block;
       padding: 7px 16px;
-      border-radius: 999px;
       border: 1px solid var(--border);
-      background: rgba(57,255,20,0.08);
+      border-radius: 30px;
       color: var(--green);
       font-size: 12px;
-      font-family: 'Space Mono', monospace;
-      box-shadow: 0 0 18px rgba(57,255,20,0.18);
+      letter-spacing: 1px;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
-    .content {
-      position: relative;
-      z-index: 1;
-      max-width: 760px;
-      margin: auto;
-      padding: 0 18px 70px;
+    h1 {
+      margin: 0 auto;
+      max-width: 850px;
+      font-size: clamp(32px, 6vw, 48px);
+      line-height: 1.2;
     }
 
-    .toc {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 28px;
-    }
-
-    .toc a {
-      text-decoration: none;
+    .highlight {
       color: var(--green);
-      border: 1px solid var(--border);
-      background: rgba(13,26,13,0.86);
-      padding: 8px 14px;
-      border-radius: 12px;
-      font-size: 12px;
-      font-weight: 900;
-      font-family: 'Space Mono', monospace;
     }
 
-    details {
-      margin-bottom: 12px;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background:
-        linear-gradient(180deg, rgba(20,42,18,0.95), rgba(8,16,8,0.95));
-      box-shadow: 0 0 22px rgba(57,255,20,0.08);
-      overflow: hidden;
-    }
-
-    summary {
-      cursor: pointer;
-      list-style: none;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-weight: 900;
-      color: #fff;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .num {
-      font-family: 'Space Mono', monospace;
-      font-size: 12px;
-      color: #061006;
-      background: linear-gradient(180deg, #9cff55, #18c92e);
-      padding: 5px 9px;
-      border-radius: 9px;
-      box-shadow: 0 0 15px rgba(57,255,20,0.35);
-    }
-
-    .body {
-      border-top: 1px solid var(--border);
-      padding: 20px;
+    .subtitle {
+      margin-top: 16px;
       color: var(--muted);
-      font-size: 15px;
     }
 
-    .body strong {
+    main {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 35px 18px 70px;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
       color: var(--green);
+      font-size: 21px;
+      margin: 0 0 16px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
     }
 
     ul {
-      margin-top: 12px;
-      padding-left: 18px;
+      padding-left: 22px;
     }
 
     li {
-      margin-bottom: 8px;
+      margin: 9px 0;
     }
 
-    .contact-card {
-      display: inline-block;
-      margin-top: 14px;
-      padding: 12px 18px;
-      border-radius: 14px;
-      background: linear-gradient(180deg, #82ff38, #16bd31);
-      color: #061006;
-      font-weight: 900;
-      text-decoration: none;
-      box-shadow: 0 0 24px rgba(57,255,20,0.45);
+    strong {
+      color: #fff;
     }
 
-    .footer {
-      text-align: center;
+    a {
+      color: var(--green);
+      overflow-wrap: anywhere;
+    }
+
+    .identity {
+      border-color: var(--green);
+      background: linear-gradient(135deg, #132b13, #081208);
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .details div {
+      overflow-wrap: anywhere;
+    }
+
+    .details .key {
+      color: var(--muted);
+    }
+
+    .note {
+      background: rgba(109,255,47,.07);
+      border-left: 3px solid var(--green);
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    footer {
       border-top: 1px solid var(--border);
-      padding: 28px 18px;
+      text-align: center;
+      padding: 30px 20px;
       color: var(--muted);
       font-size: 13px;
-      position: relative;
-      z-index: 1;
     }
 
-    .footer a {
-      color: var(--green);
-      text-decoration: none;
-      font-weight: 800;
-      margin: 0 10px;
+    @media(max-width: 600px) {
+      header {
+        padding: 45px 18px 32px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      .details {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .details .key:not(:first-child) {
+        margin-top: 12px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <nav class="nav">
-    <button class="nav-back" onclick="history.back()">←</button>
-    <span class="nav-label">Privacy Policy</span>
-  </nav>
+<header>
+  <div class="tag">OFFICIAL APP PRIVACY POLICY</div>
 
-  <header class="hero">
-    <div class="hero-icon">
-      <span></span>
+  <h1>
+    Free Robux Coins<br>
+    <span class="highlight">and Rewards</span>
+  </h1>
+
+  <p class="subtitle">Privacy Policy</p>
+  <p class="subtitle">Last updated: October 8, 2026</p>
+</header>
+
+<main>
+
+  <section class="identity" id="developer">
+    <h2>App and Developer Information</h2>
+
+    <p>
+      This is the official Privacy Policy for
+      <strong>Free Robux Coins and Rewards</strong>,
+      an Android mobile application published on
+      Google Play by <strong>Ankita KC</strong>.
+    </p>
+
+    <p>
+      This policy describes how information is
+      collected, used, shared and protected
+      in connection with this application.
+    </p>
+
+    <div class="details">
+      <div class="key">Application name</div>
+      <div><strong>Free Robux Coins and Rewards</strong></div>
+
+      <div class="key">Android package</div>
+      <div>com.ganarbx.ganarbx</div>
+
+      <div class="key">Developer / Publisher</div>
+      <div><strong>Ankita KC</strong></div>
+
+      <div class="key">Developer location</div>
+      <div>Godawari, Lalitpur 44700, Nepal</div>
+
+      <div class="key">App support email</div>
+      <div>cave.study7@gmail.com</div>
+
+      <div class="key">Developer email</div>
+      <div>sohann.mehta@gmail.com</div>
+
+      <div class="key">Platform</div>
+      <div>Android / Google Play</div>
+    </div>
+  </section>
+
+  <section id="introduction">
+    <h2>1. Introduction</h2>
+
+    <p>
+      Ankita KC ("we", "us", or "our") operates
+      Free Robux Coins and Rewards (the "App").
+    </p>
+
+    <p>
+      We respect the privacy of our users.
+      This Privacy Policy explains how we handle
+      personal information when users access
+      our mobile application and its features.
+    </p>
+
+    <p>
+      By using the App, you acknowledge the
+      information practices described in this policy.
+    </p>
+  </section>
+
+  <section id="collection">
+    <h2>2. Information We Collect</h2>
+
+    <p>
+      Depending on the features used, the App
+      and its integrated services may process
+      the following categories of information:
+    </p>
+
+    <ul>
+      <li>
+        <strong>Account information:</strong>
+        User identifiers and account-related
+        information where account features are available.
+      </li>
+
+      <li>
+        <strong>Contact information:</strong>
+        Email addresses or other information
+        voluntarily provided when contacting support.
+      </li>
+
+      <li>
+        <strong>App activity:</strong>
+        Feature interactions, reward-related activity,
+        points balances and usage information.
+      </li>
+
+      <li>
+        <strong>Device information:</strong>
+        Device model, operating system version,
+        app version and technical identifiers.
+      </li>
+
+      <li>
+        <strong>Advertising information:</strong>
+        Advertising identifiers, ad interactions
+        and related information processed by
+        advertising providers.
+      </li>
+
+      <li>
+        <strong>Diagnostics:</strong>
+        Crash reports, performance information
+        and technical error data, where diagnostic
+        services are enabled.
+      </li>
+    </ul>
+  </section>
+
+  <section id="usage">
+    <h2>3. How We Use Information</h2>
+
+    <p>
+      Information may be used for the following purposes:
+    </p>
+
+    <ul>
+      <li>Providing and maintaining App functionality.</li>
+      <li>Recording and managing reward-related activity.</li>
+      <li>Processing supported requests and redemptions.</li>
+      <li>Preventing fraud, misuse and unauthorized activity.</li>
+      <li>Displaying and measuring advertisements.</li>
+      <li>Diagnosing technical problems and improving reliability.</li>
+      <li>Responding to questions and support requests.</li>
+      <li>Meeting applicable legal obligations.</li>
+    </ul>
+  </section>
+
+  <section id="advertising">
+    <h2>4. Advertising and Google AdMob</h2>
+
+    <p>
+      Free Robux Coins and Rewards may display
+      advertisements through Google AdMob,
+      a Google advertising service.
+    </p>
+
+    <p>
+      When advertising services are enabled,
+      Google and its advertising partners may process
+      information such as advertising identifiers,
+      device information, approximate location inferred
+      from network information, and ad interactions.
+    </p>
+
+    <p>
+      Such information may be used for ad delivery,
+      measurement, fraud prevention and, where
+      permitted and consented to when required,
+      personalized advertising.
+    </p>
+
+    <p>
+      For more information, please review
+      <a href="https://policies.google.com/privacy"
+         target="_blank" rel="noopener noreferrer">
+        Google's Privacy Policy
+      </a>.
+    </p>
+  </section>
+
+  <section id="sharing">
+    <h2>5. Sharing Information</h2>
+
+    <p>
+      Information may be shared with service
+      providers that support the App's operation,
+      including advertising, hosting, analytics,
+      technical infrastructure and security services,
+      where such services are integrated.
+    </p>
+
+    <p>
+      We may also disclose information when required
+      by applicable law or when reasonably necessary
+      to protect the App, its users or our legal rights.
+    </p>
+  </section>
+
+  <section id="retention">
+    <h2>6. Data Retention</h2>
+
+    <p>
+      We aim to retain information only for as long
+      as reasonably necessary to provide App features,
+      maintain records, prevent fraud, resolve disputes
+      and satisfy applicable legal obligations.
+    </p>
+
+    <p>
+      Different categories of information may have
+      different retention periods depending on their
+      purpose and the systems processing them.
+      Third-party providers may apply their own
+      retention periods under their respective policies.
+    </p>
+  </section>
+
+  <section id="deletion">
+    <h2>7. Data Deletion Requests</h2>
+
+    <p>
+      Users may contact us to request access to,
+      correction of, or deletion of personal data
+      associated with the App.
+    </p>
+
+    <p>
+      To submit a request, email
+      <strong>cave.study7@gmail.com</strong>
+      with the subject
+      <strong>"Free Robux Coins and Rewards - Data Deletion"</strong>.
+    </p>
+
+    <p>
+      Please provide sufficient information to help
+      us identify the relevant account or records.
+      Do not send passwords or other sensitive
+      authentication information by email.
+    </p>
+
+    <p>
+      We will review the request and respond in
+      accordance with applicable law. Some records
+      may need to be retained for legal, security
+      or fraud-prevention purposes.
+    </p>
+  </section>
+
+  <section id="security">
+    <h2>8. Data Security</h2>
+
+    <p>
+      We take reasonable steps to protect information
+      against unauthorized access, alteration,
+      disclosure and loss.
+    </p>
+
+    <p>
+      However, no internet transmission or electronic
+      storage method is guaranteed to be completely secure.
+    </p>
+  </section>
+
+  <section id="children">
+    <h2>9. Children's Privacy</h2>
+
+    <p>
+      We recognize the importance of protecting
+      children's personal information.
+      Where applicable, we follow relevant privacy
+      laws and Google Play policies concerning
+      children's data and advertising.
+    </p>
+
+    <p>
+      Parents or guardians who have privacy concerns
+      may contact us using the details below.
+    </p>
+  </section>
+
+  <section id="rights">
+    <h2>10. Your Privacy Rights</h2>
+
+    <p>
+      Depending on applicable law and your location,
+      you may have rights to request access to,
+      correction or deletion of personal information,
+      or to object to or restrict certain processing.
+    </p>
+
+    <p>
+      You may contact us to exercise these rights
+      using the support email listed below.
+    </p>
+  </section>
+
+  <section id="external">
+    <h2>11. Third-Party Services and Links</h2>
+
+    <p>
+      The App may contain links to external websites
+      or integrate services operated by third parties.
+    </p>
+
+    <p>
+      Third-party services have their own privacy
+      policies and information-handling practices.
+      We recommend reviewing those policies.
+    </p>
+  </section>
+
+  <section id="changes">
+    <h2>12. Changes to This Policy</h2>
+
+    <p>
+      We may update this Privacy Policy to reflect
+      changes to App features, technologies,
+      legal requirements or information practices.
+    </p>
+
+    <p>
+      The updated policy will be published on
+      this page with a revised last-updated date.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>13. Contact Us</h2>
+
+    <p>
+      If you have any questions about this Privacy Policy,
+      personal information or data deletion, please contact:
+    </p>
+
+    <div class="details">
+      <div class="key">App</div>
+      <div>Free Robux Coins and Rewards</div>
+
+      <div class="key">Developer</div>
+      <div>Ankita KC</div>
+
+      <div class="key">Support email</div>
+      <div>cave.study7@gmail.com</div>
+
+      <div class="key">Developer email</div>
+      <div>sohann.mehta@gmail.com</div>
+
+      <div class="key">Address</div>
+      <div>Godawari, Lalitpur 44700, Nepal</div>
     </div>
 
-    <h1 class="hero-title">
-      Gana Rbx<br>
-      <span>Privacy Policy</span>
-    </h1>
+    <div class="note">
+      For privacy concerns or requests to delete
+      personal data, please contact
+      <strong>cave.study7@gmail.com</strong>.
+    </div>
+  </section>
 
-    <p class="hero-sub">Gana Rbx · Earn Rewards</p>
-    <div class="badge">Last updated: March 27, 2026</div>
-  </header>
+</main>
 
-  <main class="content">
+<footer>
+  <p>
+    © 2026 Free Robux Coins and Rewards.
+    All rights reserved.
+  </p>
 
-    <nav class="toc">
-      <a href="#intro">01 Intro</a>
-      <a href="#data">02 Data</a>
-      <a href="#use">03 Usage</a>
-      <a href="#admob">04 AdMob</a>
-      <a href="#security">05 Security</a>
-      <a href="#rights">06 Rights</a>
-      <a href="#contact">07 Contact</a>
-    </nav>
+  <p>
+    Developed and published by Ankita KC.
+  </p>
 
-    <details id="intro" open>
-      <summary><span class="num">01</span> Introduction</summary>
-      <div class="body">
-        <p>Welcome to <strong>Gana Rbx</strong>. We respect your privacy and want to protect your personal data. This Privacy Policy explains how we collect, use, and protect your information when you use our app.</p>
-      </div>
-    </details>
-
-    <details id="data">
-      <summary><span class="num">02</span> Data We Collect</summary>
-      <div class="body">
-        <p>We may collect the following types of data:</p>
-        <ul>
-          <li><strong>Identity Data</strong> — name or unique user identifier.</li>
-          <li><strong>Contact Data</strong> — email address.</li>
-          <li><strong>Usage Data</strong> — app activity, reward activity, and feature usage.</li>
-          <li><strong>Device Data</strong> — device type, operating system, and app version.</li>
-        </ul>
-      </div>
-    </details>
-
-    <details id="use">
-      <summary><span class="num">03</span> How We Use Your Data</summary>
-      <div class="body">
-        <ul>
-          <li>To provide reward-related app features.</li>
-          <li>To manage user accounts and reward points.</li>
-          <li>To process redemption or support requests.</li>
-          <li>To improve app performance and user experience.</li>
-          <li>To send important updates and notifications.</li>
-        </ul>
-      </div>
-    </details>
-
-    <details id="admob">
-      <summary><span class="num">04</span> AdMob & Third Parties</summary>
-      <div class="body">
-        <p>Gana Rbx may use <strong>Google AdMob</strong> to display advertisements. Google and third-party partners may collect certain data to show ads, measure performance, prevent fraud, and improve services.</p>
-      </div>
-    </details>
-
-    <details id="security">
-      <summary><span class="num">05</span> Data Security</summary>
-      <div class="body">
-        <p>We use reasonable security measures to protect your information from unauthorized access, loss, misuse, or disclosure.</p>
-      </div>
-    </details>
-
-    <details id="rights">
-      <summary><span class="num">06</span> Your Rights</summary>
-      <div class="body">
-        <p>Depending on your location, you may have the right to access, correct, delete, restrict, or object to the processing of your personal data.</p>
-        <p>You can contact us at <strong>cave.study7@gmail.com</strong>.</p>
-      </div>
-    </details>
-
-    <details id="contact">
-      <summary><span class="num">07</span> Contact Us</summary>
-      <div class="body">
-        <p>For any questions about this Privacy Policy, contact us here:</p>
-        <a href="mailto:cave.study7@gmail.com" class="contact-card">cave.study7@gmail.com</a>
-      </div>
-    </details>
-
-  </main>
-
-  <footer class="footer">
-    <a href="#">Terms of Service</a>
-    <a href="#">Privacy Policy</a>
-    <a href="mailto:cave.study7@gmail.com">Contact</a>
-    <p style="margin-top:14px;">© 2026 Gana Rbx. All rights reserved.</p>
-  </footer>
+  <p>
+    Android package: com.ganarbx.ganarbx
+  </p>
+</footer>
 
 </body>
 </html>
